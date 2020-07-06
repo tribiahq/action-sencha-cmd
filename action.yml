@@ -1,0 +1,14 @@
+name: Sencha Cmd
+description: A GitHub Action wrapping Sencha Cmd
+
+inputs:
+  cmd:
+    description: 'Command to run'
+    required: true
+    default: 'app build'
+
+runs:
+  using: docker
+  image: docker://rockmagicnet/sencha-cmd:6.2.2
+  args:
+    - ${{ inputs.cmd }}
