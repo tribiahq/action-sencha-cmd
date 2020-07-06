@@ -13,8 +13,7 @@ inputs:
 
 runs:
   using: docker
-  image: docker://rockmagicnet/sencha-cmd:6.2.2
-  entrypoint: entrypoint.sh
+  image: Dockerfile
   args:
     - ${{ inputs.dir }}
     - ${{ inputs.cmd }}
