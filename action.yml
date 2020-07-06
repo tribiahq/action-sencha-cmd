@@ -2,6 +2,10 @@ name: Sencha Cmd
 description: A GitHub Action wrapping Sencha Cmd
 
 inputs:
+  dir:
+    description: 'Root directory for ExtJS application'
+    required: true
+    default: './web'
   cmd:
     description: 'Command to run'
     required: true
@@ -10,5 +14,7 @@ inputs:
 runs:
   using: docker
   image: docker://rockmagicnet/sencha-cmd:6.2.2
+  entrypoint: /bin/sh
   args:
-    - ${{ inputs.cmd }}
+    - 'cd ${{ inputs.dir }}'
+    - 'sencha ${{ inputs.cmd }}'
