@@ -14,7 +14,7 @@ inputs:
 runs:
   using: docker
   image: docker://rockmagicnet/sencha-cmd:6.2.2
-  entrypoint: /bin/sh
+  entrypoint: '/bin/sh -c'
   args:
     - 'cd ${{ inputs.dir }}'
     - 'sencha ${{ inputs.cmd }}'
