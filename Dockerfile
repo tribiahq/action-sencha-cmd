@@ -1,10 +1,11 @@
-FROM openjdk:7-jre-slim
+FROM openjdk:8-jre-slim
 
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         curl \
 		libfreetype6 \
 		fontconfig \
+        unzip \
 	&& rm -rf /var/lib/apt/lists/*
 
 # Installing SenchaCmd 6.2.2
