@@ -1,5 +1,6 @@
 FROM openjdk:8-jre-slim
 
+ENV OPENSSL_CONF=/dev/null
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         curl \
