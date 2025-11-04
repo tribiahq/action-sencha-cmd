@@ -1,4 +1,4 @@
-FROM ghcr.io/tribiahq/java:8
+FROM amazoncorretto:8-alpine-jre
 
 ENV OPENSSL_CONF=/dev/null
 
