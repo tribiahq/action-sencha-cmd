@@ -1,4 +1,4 @@
-FROM amazoncorretto:8-alpine-jre
+FROM eclipse-temurin:8-jre-jammy
 
 ENV OPENSSL_CONF=/dev/null
 
