@@ -1,4 +1,4 @@
-FROM openjdk:8-jre-slim
+FROM ghcr.io/tribiahq/java:8
 
 ENV OPENSSL_CONF=/dev/null
 
